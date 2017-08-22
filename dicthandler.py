@@ -7,7 +7,7 @@ def _SeparateAndRequest(dictionary, char):
 		line = text[l].split(' ')
 		if line[0] == char:
 			words[i] = line[1]
-			i++
+			i = i + 1
 
 	return words
 
@@ -15,9 +15,9 @@ class Dictionary:
 	def __init__(self, filename):
 		with open(filename, 'r') as dfile:
 			dictionary = dfile.read()
-	def LoadNouns:
+	def LoadNouns():
 		return _SeparateAndRequest(dictionary, 'N')
-	def LoadVerbs:
+	def LoadVerbs():
 		return _SeparateAndRequest(dictionary, 'V')
-	def LoadCuss:
+	def LoadCuss():
 		return _SeparateAndRequest(dictionary, 'C')

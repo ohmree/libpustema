@@ -4,14 +4,15 @@ import math
 import dicthandler
 
 filename = "dict.txt"
-string   = "pustema"
+string   = "da"
 song     = ""
 
-dictionary = Dictionary(filename)
-method     = random.randint(0,3)
+dictionary = dicthandler.Dictionary(filename)
+#method     = random.randint(0,3)
+method = 0
 length     = len(string)
 
-for i in range(0, len1):
+for i in range(0, length):
 	word1 = ""
 	word2 = ""
 
@@ -31,7 +32,7 @@ for i in range(0, len1):
 	len1 = len(dict1)
 	len2 = len(dict2)
 
-	for w in range(0, len1)
+	for w in range(0, len1):
 		if dict1[w][i] == string[i]:
 			word1 = dict1[w]
 			w = len1
