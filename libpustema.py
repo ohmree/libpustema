@@ -1,35 +1,35 @@
+#!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 
 import math
 import dicthandler
 import random
-import enum
+from enumutils import Methods, Types
 
 filename = "dict.txt"
 string   = "da"
 song     = ""
 
 dictionary = dicthandler.Dictionary(filename)
-#method     = random.randint(0,3)
-method = 0
+method = random.randint(0, 3)
 length     = len(string)
 
 for i in range(0, length):
 	word1 = ""
 	word2 = ""
 
-	if   method == 0:
-		dict1 = dictionary.LoadNouns()
-		dict2 = dictionary.LoadNouns()
-	elif method == 1:
-		dict1 = dictionary.LoadNouns()
-		dict2 = dictionary.LoadVerbs()
-	elif method == 2:
-		dict1 = dictionary.LoadVerbs()
-		dict2 = dictionary.LoadVerbs()
-	elif method == 3:
-		dict1 = dictionary.LoadNouns()
-		dict2 = dictionary.LoadCuss()
+	if   method == Methods.NN:
+		dict1 = dictionary.LoadWords(Types.NOUN)
+		dict2 = dictionary.LoadWords(Types.NOUN)
+	elif method == Methods.NV:
+		dict1 = dictionary.LoadWords(Types.NOUN)
+		dict2 = dictionary.LoadWords(Types.VERB)
+	elif method == Methods.VV:
+		dict1 = dictionary.LoadWords(Types.VERB)
+		dict2 = dictionary.LoadWords(Types.VERB)
+	elif method == Methods.NC:
+		dict1 = dictionary.LoadWords(Types.NOUN)
+		dict2 = dictionary.LoadWords(Types.CUSS)
 
 	len1 = len(dict1)
 	len2 = len(dict2)
