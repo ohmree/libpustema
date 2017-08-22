@@ -1,14 +1,13 @@
 # -*- coding: utf-8 -*-
 
 import math
-#IMAGINARY MODULE, LESS IMPORTANT
 import dicthandler
 
 filename = "dict.txt"
 string   = "pustema"
 song     = ""
 
-dictionary = LoadDictionary(filename) #dicthandler
+dictionary = Dictionary(filename)
 method     = random.randint(0,3)
 length     = len(string)
 
@@ -17,18 +16,18 @@ for i in range(0, len1):
 	word2 = ""
 
 	if   method == 0:
-		dict1 = dictionary.LoadNouns() #dicthandler
-		dict2 = dictionary.LoadNouns() #dicthandler
+		dict1 = dictionary.LoadNouns()
+		dict2 = dictionary.LoadNouns()
 	elif method == 1:
-		dict1 = dictionary.LoadNouns() #dicthandler
-		dict2 = dictionary.LoadVerbs() #dicthandler
+		dict1 = dictionary.LoadNouns()
+		dict2 = dictionary.LoadVerbs()
 	elif method == 2:
-		dict1 = dictionary.LoadVerbs() #dicthandler
-		dict2 = dictionary.LoadVerbs() #dicthandler
+		dict1 = dictionary.LoadVerbs()
+		dict2 = dictionary.LoadVerbs()
 	elif method == 3:
-		dict1 = dictionary.LoadNouns() #dicthandler
-		dict2 = dictionary.LoadCuss() #dicthandler
-	#if it's impossible to find a first word which has that letter in i position, move on to the next word
+		dict1 = dictionary.LoadNouns()
+		dict2 = dictionary.LoadCuss()
+
 	len1 = len(dict1)
 	len2 = len(dict2)
 
