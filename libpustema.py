@@ -2,6 +2,8 @@
 
 import math
 import dicthandler
+import random
+import enum
 
 filename = "dict.txt"
 string   = "da"
